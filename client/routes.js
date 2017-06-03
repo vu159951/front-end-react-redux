@@ -1,11 +1,11 @@
-import { App } from './app'
+import { AppLayout } from './components'
 import { AboutRoute, Dashboard, DashboardRoute, NotFoundRoute, LoginRoute, Login } from './pages'
 
 export const AppRoute = {
   childRoutes: [
     {
       path: '/login',
-      component: App,
+      component: AppLayout,
       indexRoute: {
         component: Login
       },
@@ -16,7 +16,7 @@ export const AppRoute = {
     },
     {
       path: '/',
-      component: App,
+      component: AppLayout,
       indexRoute: {
         component: Dashboard
       },

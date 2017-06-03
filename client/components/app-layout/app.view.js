@@ -1,6 +1,6 @@
 import React from 'react'
 import cssModules from 'react-css-modules'
-import {Navbar} from '../components'
+import {Navbar} from '../navbar'
 import style from './app.style.scss'
 
 export const AppView = cssModules(({page}) => {
