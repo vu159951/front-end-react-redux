@@ -1,5 +1,5 @@
 import { AppLayout } from './components'
-import { AboutRoute, Dashboard, DashboardRoute, NotFoundRoute, LoginRoute, Login } from './pages'
+import { AboutRoute, Dashboard, DashboardRoute, NotFoundRoute, LoginRoute, Login, DashboardViewMode } from './pages'
 
 export const AppRoute = {
   childRoutes: [
@@ -11,6 +11,18 @@ export const AppRoute = {
       },
       childRoutes: [
         LoginRoute,
+        NotFoundRoute
+      ]
+    },
+    {
+      path: '/dashboard',
+      component: AppLayout,
+      indexRoute: {
+        component: DashboardViewMode
+      },
+      childRoutes: [
+        DashboardRoute,
+        AboutRoute,
         NotFoundRoute
       ]
     },
