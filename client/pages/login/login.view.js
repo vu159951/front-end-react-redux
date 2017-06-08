@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Form, FormControl, FormGroup } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import LoginActions from '../../actions/login';
+import LoginActions from '../../actions/login'
 
 class LoginView_ extends React.Component {
   constructor(props) {

@@ -5,11 +5,11 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 export const NavbarView = () => {
   return (
-    <Navbar default fixedTop fluid>
+    <Navbar default fixedTop fluid bsStyle='bg-primary'>
       <Navbar.Header>
         <Navbar.Brand>
           <Link to='/dashboard'>
-            <span bsSize="large"> <Glyphicon glyph="dashboard"> Dashboard</Glyphicon> </span>
+            <span bsSize="large"> <Glyphicon glyph="dashboard">Dashboard</Glyphicon> </span>
           </Link>
         </Navbar.Brand>
       </Navbar.Header>

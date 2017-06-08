@@ -9,7 +9,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { AppRoute } from './routes'
 import { AppReducers } from './reducers'
 
-const initState = window.__INITIAL_STATE__ || {}
+const initState = {}
 const store = createStore(AppReducers, initState, applyMiddleware(ReduxThunk))
 
 render(

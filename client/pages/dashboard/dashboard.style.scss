@@ -2,12 +2,20 @@
 
 @include bem-b('dashboard') {
   @include bem-e('title') {
+    @include bem-e('line') {
+      border-top: 1px solid #1E5281;
+      border-bottom: 1px solid #1E5281;
+    }
+
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #dddddd;
+    color: #305F8A;
   }
   @include bem-e('body') {
     display: flex;
     justify-content: space-around;
   }
+
+
 }
