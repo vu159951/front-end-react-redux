@@ -3,10 +3,17 @@ import {ButtonGroup, Button, DropdownButton, MenuItem} from 'react-bootstrap'
 import cssModules from 'react-css-modules'
 // import {Todos} from './components'
 import style from './dashboard.style.scss'
-import { TextWidget, TodoListWidget, SimpleChartWidget, DatatableWidget, StockWidget, OrgChartWidget } from '../../components/widgets'
+import { TextWidget } from '../../components/widgets'
 
 
 export const DashboardView = cssModules(({dashboard, onViewMode, onEditMode}) => {
+
+  let textWidgets = dashboard.widgets.map((widget) =>
+  <div className="col col-md-4" key={widget.id}>
+    <TextWidget isEdit={dashboard.isEdit}/>
+  </div>
+)
+
     return (
         <div styleName='dashboard'>
             <div styleName='dashboard__title'>
@@ -35,27 +42,9 @@ export const DashboardView = cssModules(({dashboard, onViewMode, onEditMode}) =>
               <div className="container-fluid">
                   <h2>Dashboard title</h2>
                   <hr styleName='dashboard__title__line'></hr>
+
                   <div className="row">
-                      <div className="col col-md-4">
-                          <TodoListWidget />
-                      </div>
-                      <div className="col col-md-4">
-                          <TextWidget />
-                      </div>
-                      <div className="col col-md-4">
-                          <TextWidget />
-                      </div>
-                  </div>
-                  <div className="row">
-                      <div className="col col-md-4">
-                          <DatatableWidget />
-                      </div>
-                      <div className="col col-md-4">
-                          <StockWidget />
-                      </div>
-                      <div className="col col-md-4">
-                          <OrgChartWidget />
-                      </div>
+                    {textWidgets}
                   </div>
               </div>
             </div>
